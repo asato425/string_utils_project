@@ -38,3 +38,32 @@ def test_to_camel_case():
     
     # 特殊文字を含むケース
     assert to_camel_case("hello__world") == "helloWorld"
+    
+def test_is_palindrome():
+    from string_utils.core import is_palindrome
+    
+    # 通常のケース
+    assert is_palindrome("acbca") == True
+    assert is_palindrome("racecar") == True
+    assert is_palindrome("hello") == False
+    assert is_palindrome("1a2b3c2a1") == False
+    assert is_palindrome("123") == False
+    
+def test_reverse_words():
+    from string_utils.core import reverse_words
+    
+    # 通常のケース
+    assert reverse_words("Hello World") == "World Hello"
+    assert reverse_words("Python is fun") == "fun is Python"
+    
+    # 空文字列のケース
+    assert reverse_words("") == ""
+    
+    # 単一単語のケース
+    assert reverse_words("Hello") == "Hello"
+    
+    # 数字を含むケース
+    assert reverse_words("123 456") == "456 123"
+    
+    # 特殊文字を含むケース
+    assert reverse_words("Hello, World!") == "World! Hello,"
