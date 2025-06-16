@@ -46,7 +46,7 @@ def test_is_palindrome():
     assert is_palindrome("acbca") == True
     assert is_palindrome("racecar") == True
     assert is_palindrome("hello") == False
-    assert is_palindrome("1a2b3c2a1") == True
+    assert is_palindrome("1a2b3c2a1") == False
     assert is_palindrome("123") == False
     
 def test_reverse_words():
